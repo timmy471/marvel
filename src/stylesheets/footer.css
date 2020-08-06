@@ -1,0 +1,142 @@
+.footer{
+    background-color:#151515;
+    color:#ffff;
+}
+
+.footer_container{
+    width:90%;
+    margin:0 auto;
+    padding:4rem  0;
+}
+
+.footer_top{
+    display:flex;
+   
+}
+
+.footer_left, .footer_right{
+    width:50%;
+
+}
+
+.footer_left{
+    display:flex;
+    justify-content: space-between;
+}
+
+.footer_logo{
+    margin-top:0.6rem;
+}
+
+.footer_first_links nav ul, .footer_second_links nav ul{
+    list-style-type:none;
+    text-transform: uppercase;
+    
+}
+
+.footer_first_links nav ul{
+    font-size:0.9rem;
+    font-weight:800;
+
+}
+
+.footer_first_links nav ul li, .footer_second_links nav ul li{
+    margin-top:0.8rem;
+}
+
+.footer_second_links nav ul{
+    font-weight:450;
+
+    font-size:0.8rem;
+    width:80%;
+}
+
+.footer_right{
+    display:flex;
+    margin-top:0.6rem;
+}
+
+.marvel_more{
+    width:60%;
+
+}
+
+.marvel_follow{
+    width:40%;
+}
+
+.marvel_insider{
+    display:flex;
+}
+
+.marvel_insider:hover{
+    cursor:pointer
+}
+
+
+.right_image_container img{
+    margin-top:0.2rem;
+    width: 60px;
+    height:30px;
+}
+
+.marvel_more_details{
+    margin-left:1.5rem;
+}
+
+.marvel_more_details span:nth-child(1), .marvel_follow span{
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:.5px;
+    font-weight:700
+}
+
+.marvel_more_details span:nth-child(3){
+    color: #999;
+    font-size:14px;
+    position:relative;
+    top:-3px;
+}
+
+.marvel_follow ul{
+    padding:0;
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.marvel_follow ul li{
+    font-size:22px;
+    margin-top:10px;
+    width:25%;
+    color:  #999;
+}
+
+
+
+.grey_hover_pointer:hover{
+    color: #999;
+    cursor:pointer;
+}
+
+.white_hover_pointer:hover{
+    color:#fff;
+    cursor:pointer;
+}
+
+.footer_bottom ul{
+    margin:5rem auto 0 auto;
+    width:85%;
+    line-height:1.3rem;
+    padding:0;
+    list-style-type:none;
+    font-size:13px;
+    color: #999;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.footer_bottom ul li{
+    margin-left:.5rem;
+}

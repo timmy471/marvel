@@ -1,0 +1,5 @@
+export const GET_COMICS = 'GET_COMICS';
+export const GET_INTRO_COMICS = 'GET_INTRO_COMICS';
+export const GET_CAPTAIN_COMICS = 'GET_CAPTAIN_COMICS';
+export const GET_COMIC = 'GET_COMIC';
+export const SET_LOADING = 'SET_LOADING';

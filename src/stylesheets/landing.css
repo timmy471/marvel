@@ -1,0 +1,413 @@
+.desktop_banner{
+    height:25.5rem;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/008cmv_ons_mas_mob_02.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    color:white;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+}
+
+.desktop_banner_text{
+    font-weight: 500;
+    height:100%;
+    padding: 7rem 0 0 6rem;
+    width:50%;
+}
+
+.desktop_banner_text h4{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.slash:before{
+    background-color: #c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg) skewX(45deg);
+    transform: rotate(-45deg);
+    width: 25px;
+    margin-left:3rem;
+}
+
+.slash:after{
+    background-color: #c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg) skewX(45deg);
+    transform: rotate(-45deg) skewX(45deg);
+    width: 25px;
+}
+.desktop_banner_text h1{
+    margin-top:-0.2rem;
+
+    text-transform: uppercase;
+    font-size: 2.7rem;
+
+}
+
+.quick_navs{
+    position:relative;
+    padding: 0 2rem;
+    bottom:4rem;
+    width:100%;
+
+}
+
+.page_navs ul{
+    list-style-type: none;
+    display:flex;
+    text-transform:uppercase;
+    color: #999
+}
+
+.page_navs ul li{
+    width: 8rem;
+    display:flex;
+    justify-content:center;
+    background-color:#202020;
+    padding: 1.2rem 0.7rem;
+    font-size:0.8rem;
+}
+
+.page_navs ul li:hover{
+    color:#fff;
+    cursor:pointer;
+}
+.page_navs ul li:nth-child(1){
+    border-top:5px solid #e62429;
+    color: #fff;
+}
+
+.page_navs ul li:nth-child(2){
+    border-left: 1px solid #393939;
+    border-right: 1px solid #393939;
+
+}
+
+.social_navs{
+    float:right;
+    color:#332e2e57;
+    position:relative;
+    bottom:3.5rem;
+    font-size:1.3rem;
+    padding-right:5rem;
+}
+
+.captiain_marvel{
+    display:flex;
+    flex-direction: row;
+    height:40rem;
+    width:100%;
+}
+
+.captain_marvel_woman{
+    background-image: url("../images/capttain_marvel_desktop.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    width:60%;
+}
+
+.captain_marvel_text{
+    padding-right:13%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    height:100%;
+    width:40%;
+}
+
+.captain_marvel_text h2{
+    text-transform:uppercase;
+    font-size:2rem;
+}
+
+.captain_marvel_text p{
+position:relative;
+top:-1rem;
+line-height:1.5rem;
+font-weight: 400;
+}
+
+.latest_news_container{
+    padding:1rem 0 6rem 0;
+    background:#1a1919;
+}
+
+.latest_news{
+    color:white;
+    margin:0 auto;
+    width:85%;
+}
+
+.slash h2{
+    text-transform:uppercase;
+}
+
+.latest_news_details{
+    margin-top:1rem;
+    width:100%;
+    display:grid;
+    grid-gap:.5rem;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.ln_card{
+    max-height:15rem;
+}
+
+.active{
+    color:#e62429;
+}
+
+.title{
+    color: #999;
+    font-weight:600;
+}
+
+.note{
+    font-size:0.9rem;
+    font-weight:600;
+    position:relative;
+    top:0.4rem;
+}
+
+.note:hover{
+    cursor:pointer;
+    color:#e62429;
+}
+
+.next_details{
+    position:relative;
+    top:2rem;
+    font-size:0.9rem;
+
+}
+
+.next_details ul{
+    list-style-type:none;
+    display:flex;
+     margin: 0 auto;
+
+    width:40%;
+    justify-content:space-between ;
+}
+
+.marvel_hq_container{
+    background-color:#151515;
+    height:26.3rem;
+    display:flex;
+}
+
+.marvel_hq{
+    margin-top:5rem;
+    display:flex;
+    width:100%;
+    background-color:black;
+}
+
+.marvel_hq_image{
+    color:white;
+    display:flex;
+    justify-content: flex-end;
+    width:50%;
+}
+
+.marvel_hq_image img{
+    max-width:100%;
+}
+
+.marvel_hq_text{
+    text-align:center;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    padding:0 8rem;
+    width:50%;
+}
+
+.marvel_hq_text h4{
+    letter-spacing:2px;
+    margin:0
+}
+.mobile_banner{
+    margin-top:3rem;
+    height:28rem;
+    color:#fff;
+    background-color:#151515;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
+}
+.mobile_banner_banner{
+    
+    height:45%;
+    background-image: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/008cmv_ons_mas_mob_02.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+.mobile_banner_text{
+    padding: 0 2rem;
+}
+
+.mobile_banner_text h5, .mobile_banner h2{
+    text-transform:uppercase; 
+}
+
+.mobile_banner_text h5{
+    margin-top:4rem;
+}
+
+.mobile_banner_text h2{
+    position:relative;
+    top:-1rem;
+}
+
+.mobile_banner_text p{
+    font-size:14px;
+    position:relative;
+    top:-1.5rem;
+}
+
+.mobile_social ul{
+    padding:0 2rem 1rem 2rem;
+    display:flex;
+    border-bottom: 1px solid #eee2e2;
+    justify-content: space-between;
+    font-size:1rem;
+}
+
+
+
+
+
+@media (max-width: 839px){
+    .desktop_banner{
+        display:none;
+    }
+
+    .captiain_marvel{
+        flex-direction: column!important;
+        height:40rem;
+        width:100%;
+    }
+    
+    .captain_marvel_woman{
+        background-image: url("../images/captain_marvel-mobile.jpg");
+        height:100%;
+        width:100%;
+    }
+    
+    .captain_marvel_text{
+        padding: 0 2rem;
+        height:100%;
+        width:100%;
+    }
+    
+    .captain_marvel_text h2{
+        font-size:1.4rem;
+    }
+    
+    .captain_marvel_text p{
+        font-size:0.8rem;
+    }
+
+    .page_navs{
+        padding:0;
+        width:112%;
+        position:fixed;
+        bottom:-1rem;
+        left:-2.5rem;
+    }
+
+    .page_navs ul li{
+        width: 100%;
+    }
+
+    .latest_news_container{
+        height:40rem;
+    }
+    
+    .note{
+        position:static;
+    }
+    
+    .next_details{
+        position:static;
+        margin-top:2rem;
+        font-size:0.9rem;
+        
+    }
+    
+    .next_details ul{
+         width:100%;
+        padding:0;
+        justify-content:space-evenly;
+    }
+
+    .latest_news_details{
+    /* margin-top:1rem; */
+    grid-gap:.5rem;
+    grid-template-columns: repeat(2, 1fr)
+    }
+
+    .marvel_hq_container{
+        background-color:#151515;
+        height:40rem;
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .marvel_hq{
+        display:flex;
+        margin-top:1rem;
+        width:100%;
+        flex-direction:column;
+    }
+    
+    .marvel_hq_image{
+       height:30%;
+        width:100%;
+    }
+    
+    .marvel_hq_text{
+       padding:2rem 3rem 2rem 3rem;
+        flex-direction:column;
+        justify-content: center;
+       
+        width:100%;
+    }
+    
+    .marvel_hq_text h4{
+        letter-spacing:2px;
+        margin:0
+    }
+
+    .marvel_hq_text h2{
+        font-size:1.7rem;
+    }
+
+    .desktop_footer{
+        display:none;
+    }
+}
+
+@media (min-width: 839px){
+    .mobile_header{
+        display:none;
+    }
+
+    .bottom_navs{
+        display:none;
+    }
+  
+}
+
