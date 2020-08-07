@@ -23,6 +23,13 @@ const comicsReducer = (state, action) => {
                     loading:false
                 }
 
+            case GET_COMIC:
+                return {
+                    ...state,
+                    comic: action.payload,
+                    loading:false
+                }
+
             case GET_INTRO_COMICS:
                 return {
                     ...state,

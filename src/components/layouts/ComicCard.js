@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ComicCard = comic => {
-    const {title, date, thumbnail} = comic.comic;
+    const {title, thumbnail} = comic.comic;
     return (
         
         <div className="comic_card">

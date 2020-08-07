@@ -9,8 +9,7 @@ const key = "90d608269f5e11cdfe8903db7b9b406a";
 const BASEURL = "https://gateway.marvel.com:443/v1/public/comics";
 const hash = "309bcd4cfa366fc216ddeef81bc5b638";
 const captainId = "1010338";
-// https://gateway.marvel.com:443/v1/public/comics/characters/1010338/comics?ts=1&apikey=90d608269f5e11cdfe8903db7b9b406a&hash=309bcd4cfa366fc216ddeef81bc5b638 
-// https://gateway.marvel.com/v1/public/characters/1010338/comics?dateRange=2018-01-01%2C2020-01-02&ts=1&apikey=90d608269f5e11cdfe8903db7b9b406a&hash=309bcd4cfa366fc216ddeef81bc5b638
+
 
 const ComicsState = props => {
     const initialState = {
@@ -19,7 +18,7 @@ const ComicsState = props => {
         comic: [],
         loading: false
     }
-
+// gateway.marvel.com:443/v1/public/comics/86495?apikey=90d608269f5e11cdfe8903db7b9b406a
 
     const [state, dispatch] = useReducer(comicsReducer, initialState)
 
@@ -32,37 +31,55 @@ const ComicsState = props => {
         })
         try {
             const res = await axios.get(`${BASEURL}?ts=1&apikey=${key}&hash=${hash}`);
-    
-        dispatch({
-            type: GET_COMICS,
-            payload: res.data.data.results
-        })
+
+            dispatch({
+                type: GET_COMICS,
+                payload: res.data.data.results
+            })
         } catch (error) {
             console.log(error);
         }
-        
+
     }
 
     // Get all comic issues in which Captain Marvel appears
-    const getCaptainComics = async () => {
+    const getCaptainComics = async (to, from) => {
         dispatch({
             type: SET_LOADING
         })
         try {
-            const res = await axios.get(`https://gateway.marvel.com/v1/public/characters/${captainId}/comics?ts=1&apikey=${key}&hash=${hash}`);
-            console.log(res.data.data.results);
-        dispatch({
-            type: GET_CAPTAIN_COMICS,
-            payload: res.data.data.results
-        })
+            let res;
+            const url = `https://gateway.marvel.com/v1/public/characters/${captainId}/comics`;
+            if(to && from){
+               res = await axios.get(`${url}?dateRange=${from}%2C${to}&ts=1&apikey=${key}&hash=${hash}`); 
+
+            }else{
+                res = await axios.get(`${url}?ts=1&apikey=${key}&hash=${hash}`);
+            }
+
+            dispatch({
+                type: GET_CAPTAIN_COMICS,
+                payload: res.data.data.results
+            })
         } catch (error) {
             console.log(error);
         }
     }
 
     // Get a single comic
-    const getComic = () => {
-       
+    const getComic = async id => {
+        dispatch({
+            type: SET_LOADING
+        })
+        try {
+            const res = await axios.get(`${BASEURL}/${id}?ts=1&apikey=${key}&hash=${hash}`);
+            dispatch({
+                type: GET_COMIC,
+                payload: res.data.data.results
+            })
+        } catch (error) {
+            console.log(error);
+        }
 
     }
 
@@ -70,6 +87,7 @@ const ComicsState = props => {
     return (
         <comicsContext.Provider value={{
             comics: state.comics,
+            comic: state.comic,
             captainComics: state.captainComics,
             loading: state.loading,
             getComics,

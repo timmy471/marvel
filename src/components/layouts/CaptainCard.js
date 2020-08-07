@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Link }from 'react-router-dom';
 
 const CaptainCard = comic => {
-    const { thumbnail, title, dates } = comic.comic;
+    const { thumbnail, title, dates, id } = comic.comic;
     return (
-        <div className="captain_card">
+        <Link to={`/comic/${id}`} style={linkStyle}>
+            <div className="captain_card">
             <div className="captain_img">
                 <img src={`${thumbnail.path}/portrait_uncanny.${thumbnail.extension}`} alt={title} />
             </div>
@@ -13,7 +15,14 @@ const CaptainCard = comic => {
             </div>
 
         </div>
+        </Link>
+        
     )
+}
+
+const linkStyle={
+    color:'black',
+    textDecorattion:'none!important'
 }
 
 export default CaptainCard
