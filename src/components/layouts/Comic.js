@@ -16,10 +16,9 @@ const Comic = props => {
 
     let display = false;
     let c = comic[0];
-    if (c && Object.keys(c).length > 0) {
 
+    if (c && Object.keys(c).length > 0) {
         display = true;
-        // const { title, thumbnail } = c;
     }
     
 
@@ -31,13 +30,30 @@ const Comic = props => {
                     {loading || !display ? (<p>Loading...</p>) : (
                         <>
                             <div className="cComic_image">
-                                {/* {console.log(c.thumbnail.path)} */}
-                                <img src={`${c.thumbnail.path}.${c.thumbnail.extension}`} alt={c.title} height="400" width="100%"/>
-                                {/* {c.title} */}
+                                <img src={`${c.thumbnail.path}.${c.thumbnail.extension}`} alt={c.title} height="450" width="100%"/>
                             </div>
                             <div className="cComic_details">
+                                <h2>{c.title}</h2>
+                                <div className="main_details">
+                                    <div className="grid1">
+                                    <p><b>Published</b>: {c.dates[0].date.substr(0, 10 )}</p>
+                                    <p><b>Characters</b>: {c.characters.items.map(creator => (
+                                        `${creator.name}, `
+                                    ))}</p>
+                                    <p><b>Creators</b>: {c.creators.items.map(creator => (
+                                        `${creator.name} (${creator.role}), `
+                                    ))}</p>
+                                    <p><b>FOC:</b> {c.dates[0].date.substr(0, 10 )}</p>
+                                    </div>
 
+                                    <div className="grid2">
+                                    <p><b>Series:</b> {c.series.name}</p>
+                                    <p><b>Stories:</b> {c.stories.items[0].name}, {c.stories.items[0].name}</p>
+                                    <p><b>Print Price:</b>$ {c.prices[0].price}</p>
+                                    </div>
 
+                                    
+                                </div>
                             </div>
                         </>
 

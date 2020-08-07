@@ -145,7 +145,7 @@ font-weight: 400;
     width:85%;
 }
 
-.slash h2{
+.latest_news h2{
     text-transform:uppercase;
 }
 
@@ -184,7 +184,7 @@ font-weight: 400;
 
 .next_details{
     position:relative;
-    top:2rem;
+    top:4rem;
     font-size:0.9rem;
 
 }
@@ -237,6 +237,10 @@ font-weight: 400;
     letter-spacing:2px;
     margin:0
 }
+.mobile_header{
+    overflow: hidden;
+}
+
 .mobile_banner{
     margin-top:3rem;
     height:28rem;
@@ -326,6 +330,7 @@ font-weight: 400;
         position:fixed;
         bottom:-1rem;
         left:-2.5rem;
+        z-index:2;
     }
 
     .page_navs ul li{
@@ -334,6 +339,7 @@ font-weight: 400;
 
     .latest_news_container{
         height:40rem;
+        overflow:hidden;
     }
     
     .note{

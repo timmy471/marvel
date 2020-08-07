@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react';
-import CaptainCard from '../layouts/CaptainCard';
-
+import React, { useEffect, useState, useContext, lazy, Suspense } from 'react';
 
 import ComicsContext from '../../context/comicsContext';
+import Spinner from '../layouts/Spinner';
 import '../../stylesheets/partials.css';
+
+const LazyLoad = lazy( () => import('../layouts/CaptainCard'));
 
 const CaptainMarvel = () => {
 
@@ -32,9 +33,13 @@ const CaptainMarvel = () => {
         e.preventDefault();
         if( to ==='' || from ===''){
             return alert('Please fill all fields');
-            
+        }
+
+        if( to < from ){
+            return alert('Start date can not be greater than End date');
         }
         getCaptainComics(to, from);
+       
     }
 
     return (
@@ -64,7 +69,10 @@ const CaptainMarvel = () => {
             <div className="captain_comics_cont">
                 <div className="captain_comics">
                     {captainComics.map((comic) => (
-                        <CaptainCard comic={comic} key={comic.id} />
+                        <Suspense fallback={<Spinner />} key={comic.id} >
+                            <LazyLoad comic={comic} />
+                        </Suspense>
+                        
                     ))}
                 </div>
             </div>

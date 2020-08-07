@@ -22,7 +22,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="desktop_logo_container">
-                        <img src={Logo} id="desktop_logo" alt="Marvel" />
+                       <Link to="/"><img src={Logo} id="desktop_logo" alt="Marvel" /></Link> 
                     </div>
                     <div className="desktop_top_nav_details">
                         <div className="join">

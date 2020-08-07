@@ -1,12 +1,13 @@
 .footer{
     background-color:#151515;
     color:#ffff;
+   
 }
 
 .footer_container{
     width:90%;
     margin:0 auto;
-    padding:4rem  0;
+    padding:6rem  0;
 }
 
 .footer_top{
@@ -111,7 +112,6 @@
     width:25%;
     color:  #999;
 }
-
 
 
 .grey_hover_pointer:hover{

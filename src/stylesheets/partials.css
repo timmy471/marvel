@@ -1,3 +1,16 @@
+:root {
+    --color: #e62429;
+    --txt-color: #ffff;
+    
+  }
+  
+  #div1 {
+    background-color: var(--color);
+    color: var(--main-txt-color);
+    padding: var(--main-padding);
+  }
+
+
 .btn-left-top:before
 {
     top: 12px; 
@@ -10,7 +23,7 @@
 }
 
 .btn-center{
-    background: #e62429;
+    background: var(--color);
     width:2rem;
     color:#ffff;
     font-weight:bold;
@@ -59,7 +72,7 @@
     right: -500%;
     width: 1100%;
     height: 1100%;
-    background: #e62429;     
+    background: var(--color);     
     z-index: 1;
 }
 
@@ -86,13 +99,6 @@
     
 }
 
-/* .captain_banner{
-   
-    height:25.5rem;
-    background-image: url("../images/captain4.png");
-    background-repeat:no-repeat;
-    background-size: cover;
-} */
 
 .filter{
     margin-top:2rem;
@@ -102,12 +108,13 @@
 .filter_params{
     display:flex;
     padding:0;
+    list-style-type: none;
     justify-content: center;
 }
 
 #submitBtn{
     margin-top:1rem;
-    background-color:#e62429;
+    background-color:var(--color);
     height:2rem;
     width:8rem;
     color:#fff;
@@ -119,15 +126,22 @@
     padding:1rem;
 }
 
+/* .captain_banner{
+    background-color:#d1d1d1;
+    background-repeat:no-repeat;
+    height:20rem;
+    background-size: cover;
+    background-position: 50% 30%;
+} */
+
 .captain_comics_cont{
     padding:3rem;
 }
 
 .img_container img{
-    border-bottom:4px solid #e62429;
+    border-bottom:4px solid var(--color);
     height:34vh;
     width:100%;
-    /* box-shadow: 80px 80px 20px 80px rgb(61, 59, 59); */
 }
 
 .captain_card{
@@ -139,10 +153,8 @@
 .captain_card:hover{
     position:relative;
     top:-0.1rem;
-    
     cursor:pointer;
-   
-    color: #e62429;
+    color: var(--color);
 }
 
 
@@ -173,7 +185,7 @@
 @media (max-width: 1024px){
     .comic_container{
     
-        padding:5rem 1.5rem;
+        padding:0rem 1.5rem;
         grid-gap:1rem;
     }
 
@@ -196,7 +208,7 @@
 @media (max-width: 420px){
     .comic_container{
     
-        padding:5rem 1rem;
+        padding:2rem 1rem;
         grid-gap:1rem;
         grid-template-columns: repeat(2, 1fr)
     }

@@ -6,7 +6,6 @@
 
 .cComic_main{
     padding:4rem;
-    border:2px solid green;
     display:flex;
     color:white;
 }
@@ -15,8 +14,35 @@
     width:25%;
 }
 
-
-
 .cComic_details{
-    border:2px silid red;
+    background-color:#fff;
+    width:75%;
+    color:black;
+    padding:1rem 2rem;
+}
+
+.main_details{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.grid1, .grid2{
+    width:50%;
+    font-size:0.9rem;
+}
+
+@media (max-width: 839px){
+    .main_details{
+        display:block;
+    }
+    .cComic_image{
+        width:100%;
+        display:block;
+    }
+    .grid1, .grid2{
+        width:100%;
+    }
+
+    
 }

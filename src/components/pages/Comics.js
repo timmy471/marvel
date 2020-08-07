@@ -16,6 +16,9 @@ const Comics = () => {
 
     return (
         <div>
+            <div className="header" style={{textAlign:'center', marginTop:"3rem"}}>
+                <h1>All Comics</h1>
+            </div>
             <div className="comic_container">
             {comics.map( (comic) => (
                 <ComicCard comic={comic} key={comic.id}/>

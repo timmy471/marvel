@@ -92,9 +92,9 @@ const Landing = () => {
 
             <div className="latest_news_container">
                 <div className="latest_news">
-                    <div className="slash">
+                    {/* <div className="slash"> */}
                         <h2>Latest News</h2>
-                    </div>
+                    {/* </div> */}
                     <div className="latest_news_details">
                         {latestNews.map(ln => (
                             <div className='ln_card' key={ln.id}>
@@ -126,7 +126,7 @@ const Landing = () => {
                 <div className="slash">
                     <h4>Comics</h4>
                 </div>
-                <Comics />
+                <Comics limit={true}/>
             </div> */}
             <div className="marvel_hq_container">
                 <div className="marvel_hq">
@@ -143,13 +143,7 @@ const Landing = () => {
 
             </div>
 
-            {/* <div className="bottom_navs">
-                    <ul>
-                        <li>Overview</li>
-                        <li>In comics Profile</li>
-                        <li>In comics Full Report</li>
-                    </ul>
-                </div> */}
+            
 
         </div>
     )

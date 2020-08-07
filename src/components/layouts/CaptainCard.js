@@ -11,7 +11,7 @@ const CaptainCard = comic => {
             </div>
             <div className="cap_body">
                 <p className="cap_title">{title}</p>
-                <p className="cap_date">{dates[0].date}</p>
+                <p className="cap_date">{dates[0].date.substr(0, 10)}</p>
             </div>
 
         </div>
@@ -22,7 +22,8 @@ const CaptainCard = comic => {
 
 const linkStyle={
     color:'black',
-    textDecorattion:'none!important'
+    textDecoration:'none'
 }
+
 
 export default CaptainCard
